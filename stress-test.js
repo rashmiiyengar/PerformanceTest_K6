@@ -3,15 +3,17 @@ import { sleep } from 'k6';
 
 //Staging
 //Designed to test,actual values may differ as per application
+//to test application under above average condition
 export const options={
     stages: [
         {
         duration:'10s',
-        target: 10   
+        //target load
+        target: 100  
         },
         {
         duration:'30s',
-        target: 10   
+        target: 100  
         },
         {
         duration:'10s',

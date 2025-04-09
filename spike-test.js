@@ -3,15 +3,18 @@ import { sleep } from 'k6';
 
 //Staging
 //Designed to test,actual values may differ as per application
+//Sudden increase or decrease in load
+//ex: a new product was launched and that product created a lot of traffic sudden spike
 export const options={
     stages: [
         {
         duration:'10s',
-        target: 10   
+        //target load
+        target: 100  
         },
         {
         duration:'30s',
-        target: 10   
+        target: 100  
         },
         {
         duration:'10s',
