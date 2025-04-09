@@ -8,16 +8,12 @@ import { sleep } from 'k6';
 export const options={
     stages: [
         {
-        duration:'10s',
+        duration:'2m',
         //target load
-        target: 100  
+        target: 1000  
         },
         {
-        duration:'30s',
-        target: 100  
-        },
-        {
-        duration:'10s',
+        duration:'1m',
         target: 0    
         }
     ]
@@ -26,8 +22,4 @@ export const options={
 export default function(){
     http.get('https://test.k6.io');
     sleep(1);
-    http.get('https://test.k6.io/contact.php');
-    sleep(2)
-    http.get('https://test.k6.io/news.php');
-    sleep(2);
 }
