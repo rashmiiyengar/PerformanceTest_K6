@@ -1,8 +1,8 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
 
-//Staging
 //If an appln is placed i=under load for an extended period of time also known as edurance test
+//should run after a successful load test
 export const options={
     stages: [
         {
