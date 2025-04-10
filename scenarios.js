@@ -7,5 +7,9 @@ export default function() {
     check(response,{
         'status code is 200':(r)=> r.status === 200
     });
+
+    check(response,{
+        'Page is home page':(r)=> r.body.includes('Collection of simple web-pages suitable for load testing')===true
+    });
     
 }
