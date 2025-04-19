@@ -33,7 +33,7 @@ export default function() {
             }
         })
     
-        if (res.error){
+        if (!res.error){
             httpErrors.add(1,{page:'order'})
         }
 
