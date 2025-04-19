@@ -2,8 +2,11 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 export const options={
-    vus:5,
-    duration:'10s'
+    vus:1,
+    duration:'10s',
+    cloud:{
+        projectID: 3762366
+    }
 }
 export default function(){
     http.get('https://test.k6.io');
